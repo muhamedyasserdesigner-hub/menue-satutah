@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ستوته | المنيو</title>
+  <link rel="stylesheet" href="./indx.css" />
+</head>
+
+<body>
+  <!-- Top Bar -->
+  <header class="topbar">
+    <div class="brand">
+      <img src="./img/logo.png" alt="شعار ستوته" class="brand-logo" />
+      <div class="logo">ستوته</div>
+      <div class="tagline">الطعم الأصيل</div>
+    </div>
+
+    <div class="top-actions">
+      <button class="chip" id="themeBtn" type="button">الثيم: Classic</button>
+      <button class="btn btn-ghost" type="button">اتصل بنا</button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-card">
+      <div class="mascot-wrap">
+        <img src="./img/mascot.png" alt="ماسكوت ستوته" class="mascot-hero" />
+      </div>
+      <h1>منيو ستوته</h1>
+      <p>اختار اللي تحبه… وزوّد إضافاتك بسهولة.</p>
+
+      <div class="search-row">
+        <input id="searchInput" class="input" type="search" placeholder="ابحث عن صنف… (مثال: طعمية)" />
+        <button id="clearBtn" class="btn btn-primary" type="button">مسح</button>
+      </div>
+
+      <div id="cats" class="cats"></div>
+    </div>
+  </section>
+
+  <!-- Main -->
+  <main class="container">
+    <div class="grid">
+      <!-- Menu -->
+      <section class="panel">
+        <div class="panel-head">
+          <h2 id="sectionTitle">الأصناف</h2>
+          <div class="meta" id="countMeta">0 صنف</div>
+        </div>
+
+        <div id="cards" class="cards"></div>
+      </section>
+
+      <!-- Cart -->
+      <aside class="panel cart">
+        <div class="panel-head">
+          <h2>السلة</h2>
+          <div class="meta" id="cartCount">0 عناصر</div>
+        </div>
+
+        <div id="cartItems" class="cart-items empty">
+          <div class="empty-state">
+            <div class="empty-icon">🧺</div>
+            <p>السلة فاضية… اختار صنف واضغط “أضف”.</p>
+          </div>
+        </div>
+
+        <div class="cart-footer">
+          <div class="total-row">
+            <span>الإجمالي</span>
+            <strong id="totalPrice">0.00</strong>
+          </div>
+          <button class="btn btn-accent" type="button">تابع للدفع</button>
+          <button id="resetCart" class="btn btn-ghost" type="button">تفريغ السلة</button>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- Micro Footer -->
+  <footer class="micro-footer" id="microFooter">
+    <div class="footer-row">
+      <div class="footer-brand">
+        <img src="./img/logo.png" alt="شعار ستوته" class="footer-logo" />
+        <div>
+          <div class="footer-title">ستوته – الطعم الأصيل</div>
+          <div class="footer-meta">⏰ يوميًا 8 ص – 12 م</div>
+        </div>
+      </div>
+
+      <a class="btn btn-primary btn-whatsapp" href="https://wa.me/201000000000" target="_blank" rel="noreferrer">واتساب</a>
+
+      <button class="btn btn-ghost to-top" id="toTopBtn" type="button">العودة للأعلى ↑</button>
+    </div>
+    <div class="footer-copy">© ستوته 2026</div>
+  </footer>
+
+  <!-- Mobile Sticky Cart -->
+  <div class="sticky-cart">
+    <div class="sticky-info">
+      <span id="stickyQty">0</span>
+      <span>عنصر</span>
+      <span class="dot">•</span>
+      <strong id="stickyTotal">0.00</strong>
+    </div>
+    <button class="btn btn-accent" type="button">اذهب للدفع</button>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
